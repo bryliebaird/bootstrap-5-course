@@ -1,8 +1,21 @@
-// custom variables (must be listed above import)
-
+// redefined bootstrap variables
 $primary: #c29938;
 $light: #fbf5e5;
 
+
+//import functions and variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+
+// custom variables + custom maps
+$custom-theme-colors: (
+    "altlight": #f2ebfa,
+    "altdark": #522192
+);
+
+// redefine bootstrap theme-colors map to include both bootstrap theme-colors as well as our custom theme colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 
 //import bootstrap
